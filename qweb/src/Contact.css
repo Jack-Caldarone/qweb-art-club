@@ -1,0 +1,86 @@
+body {
+    background: linear-gradient(#F2F2F2,  #CBC3E1);
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #1A1A1A;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    padding-top: 20Px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: row;
+    column-gap: 100px;
+}
+
+.box {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.logo_link {
+    width: 300px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    flex-direction: row;
+}
+
+.purpleTextbox {
+    background: rgba(180, 166, 198, 0.62);
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    flex-direction: column;
+    padding: 25px;
+    height: auto;
+    width: auto;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+img {
+    height: auto;
+    width: auto;
+    max-width: 90px;
+    max-height: 90px;
+    padding: 10px 10px;
+}
+
+h2 {
+    font-weight: 700;
+    display: flex;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #1A1A1A;
+    font-size: 32px;
+
+}
+
+p {
+    display: flex;
+    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #1A1A1A;
+    font-size: 21px;
+    font-weight: 500;
+}
