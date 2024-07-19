@@ -1,0 +1,39 @@
+footer {
+    background-color: #1A1A1A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 30px;
+  }
+  
+  footer a {
+    color: white;
+    position: relative;
+    display: inline-block;
+    min-width: 120px;
+    z-index: 1;
+    text-decoration: none;
+    
+  }
+
+  footer b {
+    color: white;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  }
+
+  footer p {
+    color: white;
+    margin: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  }
+
+.copyright {
+    align-self: stretch;
+    font-size: 12px;
+    line-height: 17px;
+    font-family: var(--font-roboto);
+    text-align: center;
+    display: inline-block;
+    min-width: 81px;
+  }
