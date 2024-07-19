@@ -21,7 +21,6 @@ function Footer(){
             <div class="vertical-line"></div>
             <a href = "https://www.instagram.com/artclubqu">Instagram.</a>
             <a href = "https://www.linkedin.com/company/artclubqu">LinkedIn.</a>
-            <p>Admin.</p>
         </footer>
     );
 }
