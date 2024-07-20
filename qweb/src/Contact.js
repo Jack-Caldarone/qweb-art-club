@@ -1,22 +1,116 @@
 import './Contact.css';
 import Header from './Header';
+import Footer from './Footer';
+import { createTheme, styled, ThemeProvider} from "@mui/material/styles";
+import TextField from '@mui/material/TextField';
+
+// MAKE PAGE RESPONSIVE
+
 
 function Contact(){
     return (
         <div className='Contact'>
             <Header />
             <h1>Contact.</h1>
-            {/* <div id="container">
-                <div className='box' id='contactBoxes'>
-                    <h2>where submissions will go</h2>
-                </div>
-                <div className='box' id='purpleTextBox'>
-                    <h2>Stay up to date with us</h2>
-                </div>
-            </div> */}
+            
             <div className='row' id='row'>
-                <div className='purpleTextbox' id='purpleTextbox'>
-                    <p>Do this work</p>
+                <div className='inputFields' id='purpleTextbox'>
+                    <TextField 
+                        id="outlined-basic"
+                        label="Name"
+                        variant="outlined"
+                        sx = {{
+                            "& .MuiOutlinedInput-root" : {
+                                background: "#EDECF0",
+                                color: "#1a1a1a",
+                                fontFamily: "Helvetica",
+                                width: "350px",
+                                "& .MuiOutlinedInput-notchedOutline" : {
+                                    borderColor: "#A496BC",
+                                    borderWidth: "2px",
+                                },
+                            },
+                            "& .MuiInputLabel-outlined" : {
+                                color: "#766B94",
+                                fontWeight: "bold",
+                            },
+                            "& .Mui-focused" : {
+                                "& .MuiOutlinedInput-notchedOutline" : {
+                                    borderColor: "#766B94",
+                                    borderWidth: "2px",
+                                },
+                            },
+                            
+                        }}
+                    />
+                                        <TextField 
+                        id="outlined-basic"
+                        label="E-mail"
+                        variant="outlined"
+                        sx = {{
+                            "& .MuiOutlinedInput-root" : {
+                                background: "#EDECF0",
+                                color: "#1a1a1a",
+                                fontFamily: "Helvetica",
+                                width: "350px",
+                                "& .MuiOutlinedInput-notchedOutline" : {
+                                    borderColor: "#A496BC",
+                                    borderWidth: "2px",
+                                },
+                            },
+                            "& .MuiInputLabel-outlined" : {
+                                color: "#766B94",
+                                fontWeight: "bold",
+                            },
+                            "& .Mui-focused" : {
+                                "& .MuiOutlinedInput-notchedOutline" : {
+                                    borderColor: "#766B94",
+                                    borderWidth: "2px",
+                                },
+                            },
+                            
+                        }}
+                    />
+                                        <TextField 
+                        id="outlined-basic"
+                        label="Message"
+                        variant="outlined"
+                        multiline
+                        rows = {5}
+                        fullWidth
+                        sx = {{
+                            "& .MuiInputBase-root" : {
+                                alignItems: "flex-start",
+                            },
+                            "& .MuiInputBase-input" : {
+                                textAlign: "left",
+                                wordBreak: "break-word",
+                            },
+                            "& .MuiOutlinedInput-root" : {
+                                background: "#EDECF0",
+                                color: "#1a1a1a",
+                                fontFamily: "Helvetica",
+                                width: "350px",
+                                height: "200px",
+                                
+                                "& .MuiOutlinedInput-notchedOutline" : {
+                                    borderColor: "#A496BC",
+                                    borderWidth: "2px",
+                                },
+                            },
+                            "& .MuiInputLabel-outlined" : {
+                                color: "#766B94",
+                                fontWeight: "bold",
+                            },
+                            "& .Mui-focused" : {
+                                "& .MuiOutlinedInput-notchedOutline" : {
+                                    borderColor: "#766B94",
+                                    borderWidth: "2px",
+                                },
+                            },
+                            
+                        }}
+                    />
                 </div>
                 <div className="purpleTextbox" id="purpleTextbox">
                     <h2>Stay up to date with us.</h2>
@@ -37,6 +131,7 @@ function Contact(){
                 </div>
 
             </div>
+            <Footer />
             
         </div>
     );

@@ -60,6 +60,18 @@ h1 {
     max-height: fit-content;
 }
 
+.inputFields {
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 25px;
+    height: auto;
+    width: 300px;
+    max-width: fit-content;
+    max-height: fit-content;
+    row-gap: 30px;
+}
+
 img {
     height: auto;
     width: auto;
