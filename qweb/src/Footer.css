@@ -4,7 +4,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 30px;
+    padding: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
   
   footer a {
@@ -14,17 +17,20 @@ footer {
     min-width: 120px;
     z-index: 1;
     text-decoration: none;
+    padding: auto;
     
   }
 
   footer b {
     color: white;
+    font-size: 20px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   }
 
   footer p {
     color: white;
     margin: 0;
+    font-size: 17px;;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   }
 
@@ -37,3 +43,24 @@ footer {
     display: inline-block;
     min-width: 81px;
   }
+
+.vertical-line {
+  height: 40px;
+  border-left: 1px solid white;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.art-club-parent {
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.club-text {
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
