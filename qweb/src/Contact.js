@@ -3,11 +3,38 @@ import Header from './Header';
 import Footer from './Footer';
 import { createTheme, styled, ThemeProvider} from "@mui/material/styles";
 import TextField from '@mui/material/TextField';
+import { useState } from 'react';
 
 // MAKE PAGE RESPONSIVE
 
 
+
 function Contact(){
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [msg, setMsg] = useState('');
+
+    function handleName(event) {
+        setName(event.target.value);
+    }
+
+    function handleEmail(event) {
+        setEmail(event.target.value);
+    }
+
+    function handleMsg(event) {
+        setMsg(event.target.value);
+    }
+
+    function getInput() {
+        console.log("Name: ", name);
+        console.log("Email: ", email);
+        console.log("Message: ", msg);
+    }
+
+    
+
+
     return (
         <div className='Contact'>
             <Header />
@@ -15,10 +42,13 @@ function Contact(){
             
             <div className='row' id='row'>
                 <div className='inputFields' id='purpleTextbox'>
+                    {/* Name textfield */}
                     <TextField 
                         id="outlined-basic"
                         label="Name"
                         variant="outlined"
+                        value={name}
+                        onChange={handleName}
                         sx = {{
                             "& .MuiOutlinedInput-root" : {
                                 background: "#EDECF0",
@@ -43,10 +73,13 @@ function Contact(){
                             
                         }}
                     />
-                                        <TextField 
+                    {/* email textfield */}
+                    <TextField 
                         id="outlined-basic"
                         label="E-mail"
                         variant="outlined"
+                        value={email}
+                        onChange={handleEmail}
                         sx = {{
                             "& .MuiOutlinedInput-root" : {
                                 background: "#EDECF0",
@@ -71,13 +104,16 @@ function Contact(){
                             
                         }}
                     />
-                                        <TextField 
+                    {/* message textbox */}
+                    <TextField 
                         id="outlined-basic"
                         label="Message"
                         variant="outlined"
                         multiline
                         rows = {5}
                         fullWidth
+                        value={msg}
+                        onChange={handleMsg}
                         sx = {{
                             "& .MuiInputBase-root" : {
                                 alignItems: "flex-start",
@@ -111,6 +147,7 @@ function Contact(){
                             
                         }}
                     />
+                    <div className='button-div'><button class="submit-btn" onClick={getInput}>Submit</button></div>
                 </div>
                 <div className="purpleTextbox" id="purpleTextbox">
                     <h2>Stay up to date with us.</h2>
