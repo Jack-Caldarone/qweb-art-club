@@ -7,74 +7,35 @@ function Gallery(){
         <div className="Gallery">
             <Header/>
             <main class="frame-main">
-                <h1>Gallery.</h1>
+              <h1>Gallery.</h1>
 
-{/* <!-- years --> */}
-<section class="past-events-container">
-    <div>
-      <button class="event-name-wrapper2">
-        <div class="event-name-text">2024</div>
-      </button>
-    </div>
-    <div>
-      <button class="event-name-wrapper2">
-        <div class="event-name-text">2023</div>
-      </button>
-    </div>
-</section>
+              <div class="years-container">
+                <button class="years-button">2023</button>
+                <button class="years-button"> 2024</button>
+              </div>
 
-<hr class="solid"></hr>
+        <hr class="solid"></hr>
 
-{/* <!-- events --> */}
-<section class="past-events-container">
+        <div class="years-container">
+          <button class="events-button">Event Name</button>
+          <button class="events-button">Event Name</button>
+          <button class="events-button">Event Name</button>
+          <button class="events-button">Event Name</button>
+          <button class="events-button">Event Name</button>
+          <button class="events-button">Event Name</button>
+        </div>
 
-  <div class="past-events2">
-    <div class="mediums-label2">
-      <button class="event-name-wrapper">
-        <div class="event-name-text">Event Name</div>
-      </button>
-    </div>
-    
-    <div class="mediums-label2">
-      <button class="event-name-wrapper">
-        <div class="event-name-text">Event Name</div>
-      </button>
-      <button class="event-name-wrapper">
-        <div class="event-name-text">Event Name</div>
-      </button>
-    </div>
 
-    <div class="mediums-label2">
-      <button class="event-name-wrapper">
-        <div class="event-name-text">Event Name</div>
-      </button>
-      <button class="event-name-wrapper">
-        <div class="event-name-text">Event Name</div>
-      </button>
-    </div>
+        <br/>
 
-    <div class="mediums-label2">
-      <button class="event-name-wrapper">
-        <div class="event-name-text">Event Name</div>
-      </button>
-    </div>
-  </div>
-  
-</section>
-<section class="frame-section">
-  <div class="event-description-group">
-    <div class="event-description1"></div>
-    <div class="lorem-ipsum-dolor-container2">
-      <p class="lorem-ipsum-dolor3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim.
-      </p>
-      <p class="blank-line4">&nbsp;</p>
-      <p class="blank-line5">&nbsp;</p>
-    </div>
-  </div>
-</section>
+        <div class="event-desc-container">
+          <p class="event-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim.
+          </p>
+        </div>
+
 <section class="frame-wrapper6">
   <div class="frame-parent6">
     <div class="rectangle-container">
