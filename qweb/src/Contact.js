@@ -123,7 +123,7 @@ function Contact(){
                         <p>Connect with our club members.</p>
                     </div>
                     <div className='logo_link'>
-                        <img src="https://cdn1.iconfinder.com/data/icons/ui-essential-17/32/UI_Essential_Outline_1_essential-app-ui-picture-photo-512.png" alt="Photo icon"></img>
+                        <a href="/gallery"><img src="https://cdn1.iconfinder.com/data/icons/ui-essential-17/32/UI_Essential_Outline_1_essential-app-ui-picture-photo-512.png" alt="Photo icon"></img></a>
                         <p>See our past showcases.</p>
                     </div>
                     
