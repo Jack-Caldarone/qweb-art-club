@@ -27,6 +27,8 @@ import './App.css';
 import React from 'react';
 // import './global.css';
 import './Events.css';
+import Footer from './Footer';
+import Header from './Header'
 
 function Events() {
   const event_button = (id) => {
@@ -36,14 +38,7 @@ function Events() {
   
   return (
     <div className="events2">
-      <header className="navbar-background-group">
-        <div className="navbar-background1"></div>
-        <a href="home.html"><b className="home1">Home.</b></a>
-        <a href="about.html"><b className="about-us1">About Us.</b></a>
-        <a href="events.html"><b className="events1">Events.</b></a>
-        <a href="gallery.html"><b className="gallery1">Gallery.</b></a>
-        <a href="contact.html"><b className="contact1">Contact.</b></a>
-      </header>
+      <Header/>
       <section className="events2-inner">
         <div className="frame-group">
           <div className="frame-parent1">
@@ -174,39 +169,8 @@ function Events() {
           </div>
         </div>
       </section>
-      <footer className="footer-background-group">
-        <div className="footer-background1"></div>
-        <div className="frame-wrapper5">
-          <div className="art-club-group">
-            <b className="art-club1">
-              <p className="art1">Art</p>
-              <p className="club1">Club.</p>
-            </b>
-            <div className="copyright1">© 2023 — 2024</div>
-          </div>
-        </div>
-        <div className="materials-a-space-create-ha-container">
-          <div className="materials-a-space-container1">
-            <p className="materials-a-space-create1">
-              <b>Materials, a Space, Create.</b>
-            </p>
-            <p className="have-any-questions1">Have any questions?</p>
-            <p className="get-in-contact1">Get in contact with us now.</p>
-          </div>
-        </div>
-        <div className="divider-container">
-          <img className="divider-icon1" loading="lazy" alt="" src="./public/divider1.svg" />
-        </div>
-        <div className="instagram-container">
-          <a href="https://www.instagram.com/artclubqu"><div className="instagram1">Instagram.</div></a>
-        </div>
-        <div className="e-mail-container">
-          <a href="https://www.linkedin.com/company/artclubqu/"><div className="e-mail1">LinkedIn.</div></a>
-        </div>
-        <div className="admin-container">
-          <a href="login.html"><div className="admin1">Admin.</div></a>
-        </div>
-      </footer>
+      
+      <Footer/>
     </div>
   );
 }

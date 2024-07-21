@@ -157,24 +157,35 @@ a {
   background: linear-gradient(180deg, #f2f2f2, #cbc3e1);
 }
 
-.footer-background1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: var(--color-gray-300);
+.copyright {
+  align-self: stretch;
+  font-size: 12px;
+  line-height: 17px;
+  font-family: var(--font-roboto);
+  text-align: center;
+  display: inline-block;
+  min-width: 81px;
 }
 
-.footer-background-group {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 150px;
-  color: white;
+.vertical-line {
+height: 40px;
+border-left: 1px solid white;
+padding: 20px;
+justify-content: center;
+align-items: center;
+
 }
 
-.footer-background-group a {
-  margin: 0 10px;
+.art-club-parent {
+padding: 30px;
+justify-content: center;
+align-items: center;
+}
+
+.club-text {
+padding: 30px;
+justify-content: center;
+align-items: center;
 }
 
 .art-club-group {
