@@ -1,176 +1,115 @@
-import logo from './logo.svg';
-import './App.css';
-
-// function Events() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload Lumber.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default Events;
-
-import React from 'react';
-// import './global.css';
+import React, { useState } from 'react';
 import './Events.css';
 import Footer from './Footer';
-import Header from './Header'
+import Header from './Header';
+
+const upcomingEvents = [
+  { id: 1, name: 'Event Name 1', description: 'Description for Event Name 1', time: '6:00 PM - 7:00 PM', location: 'Kingston Hall, Room 200' },
+  { id: 2, name: 'Event Name 2', description: 'Description for Event Name 2', time: '7:00 PM - 8:00 PM', location: 'Kingston Hall, Room 201' },
+  { id: 3, name: 'Event Name 3', description: 'Description for Event Name 3', time: '8:00 PM - 9:00 PM', location: 'Kingston Hall, Room 202' },
+  { id: 4, name: 'Event Name 4', description: 'Description for Event Name 4', time: '9:00 PM - 10:00 PM', location: 'Kingston Hall, Room 203' },
+];
+
+const pastEvents = {
+  2024: [
+    { id: 1, name: 'Event Name 1', description: 'Description for Past Event Name 1' },
+    { id: 2, name: 'Event Name 2', description: 'Description for Past Event Name 2' },
+    { id: 3, name: 'Event Name 3', description: 'Description for Past Event Name 3' },
+    { id: 4, name: 'Event Name 4', description: 'Description for Past Event Name 4' },
+    { id: 5, name: 'Event Name 5', description: 'Description for Past Event Name 5' },
+    { id: 6, name: 'Event Name 6', description: 'Description for Past Event Name 6' },
+    { id: 7, name: 'Event Name 7', description: 'Description for Past Event Name 7' },
+    { id: 8, name: 'Event Name 8', description: 'Description for Past Event Name 8' },
+  ],
+  2023: [
+    { id: 1, name: 'Event Name 1', description: 'Description for Past Event Name 1' },
+    { id: 2, name: 'Event Name 2', description: 'Description for Past Event Name 2' },
+    { id: 3, name: 'Event Name 3', description: 'Description for Past Event Name 3' },
+    { id: 4, name: 'Event Name 4', description: 'Description for Past Event Name 4' },
+    { id: 5, name: 'Event Name 5', description: 'Description for Past Event Name 5' },
+    { id: 6, name: 'Event Name 6', description: 'Description for Past Event Name 6' },
+    { id: 7, name: 'Event Name 7', description: 'Description for Past Event Name 7' },
+    { id: 8, name: 'Event Name 8', description: 'Description for Past Event Name 8' },
+  ],
+};
 
 function Events() {
-  const event_button = (id) => {
-    console.log(`Event button ${id} clicked`);
-    // Add the functionality you need for the button click here
-  };
-  
+  const [selectedUpcomingEvent, setSelectedUpcomingEvent] = useState(upcomingEvents[0]);
+  const [selectedYear, setSelectedYear] = useState(2024);
+  const [selectedPastEvent, setSelectedPastEvent] = useState(pastEvents[2024][0]);
+
   return (
-    <div className="events2">
-      <Header/>
-      <section className="events2-inner">
-        <div className="frame-group">
-          <div className="frame-parent1">
-            <div className="upcoming-events-wrapper">
-              <h1 className="upcoming-events">Upcoming Events.</h1>
-            </div>
-            <div className="frame-parent2">
-              <button className="current-event-button" onClick={() => event_button(1)}>
-                <div className="event-name1">Event Name.</div>
-              </button>
-              <button className="current-event-button">
-                <div className="event-name2">Event Name.</div>
-              </button>
-              <button className="current-event-button">
-                <div className="event-name2">Event Name.</div>
-              </button>
-              <button className="current-event-button">
-                <div className="event-name4">Event Name.</div>
-              </button>
+    <div className="events-container">
+      <Header />
+      <section className="events-inner">
+        <div className="events-wrapper">
+          <div className="upcoming-events-section">
+            <h1 className="section-title">Upcoming Events.</h1>
+            <div className="upcoming-events-list">
+              {upcomingEvents.map((event) => (
+                <button
+                  key={event.id}
+                  className={`event-button ${selectedUpcomingEvent.id === event.id ? 'active' : ''}`}
+                  onClick={() => setSelectedUpcomingEvent(event)}
+                >
+                  {event.name}
+                </button>
+              ))}
             </div>
           </div>
-          <div className="lorem-ipsum">
-            <div className="event-info-parent">
-              <div className="event-info"></div>
-              <div className="event-name-wrapper1">
-                <h3 className="event-name5">Event Name.</h3>
+          <div className="event-details-section">
+            <div className="event-details">
+              <h3 className="event-title">{selectedUpcomingEvent.name}</h3>
+              <p className="event-description">{selectedUpcomingEvent.description}</p>
+              <div className="event-timing-location">
+                <p>{selectedUpcomingEvent.time}</p>
+                <p>{selectedUpcomingEvent.location}</p>
               </div>
-              <div className="lorem-ipsum-dolor-sit-amet-co-wrapper">
-                <div className="lorem-ipsum-dolor-container">
-                  <p className="lorem-ipsum-dolor1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-                  <p className="blank-line">&nbsp;</p>
-                  <p className="blank-line1">&nbsp;</p>
-                </div>
-              </div>
-              <div className="pm-700-pm-kingston-hall-ro-parent">
-                <b className="pm-700-container">
-                  <p className="pm-700">6:00 PM - 7:00 PM</p>
-                  <p className="kingston-hall-room">Kingston Hall, Room 200</p>
-                </b>
-                <div className="frame-wrapper1">
-                  <button className="register-for-event-wrapper">
-                    <div className="register-for-event">Register for Event</div>
-                  </button>
-                </div>
-              </div>
+              <button className="register-button">Register for Event</button>
             </div>
           </div>
         </div>
       </section>
-      <section className="events2-child">
-        <div className="section2-background-parent">
-          <div className="section2-background"></div>
-          <div className="frame-parent3">
-            <div className="frame-wrapper2">
-              <div className="past-events-parent">
-                <h1 className="past-events">Past Events.</h1>
-                <div className="button-register-wrapper">
-                  <div className="button-register">
-                    <div className="wrapper">
-                      <div className="div">2024</div>
-                    </div>
-                    <div className="container">
-                      <div className="div1">2023</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <img className="line-icon" loading="lazy" alt="" src="./public/line-4.svg" />
+      <section className="past-events-section">
+        <h1 className="section-title">Past Events.</h1>
+        <div className="year-buttons-wrapper">
+          {Object.keys(pastEvents).map((year) => (
+            <button
+              key={year}
+              className={`year-button ${selectedYear.toString() === year ? 'active' : ''}`}
+              onClick={() => {
+                setSelectedYear(parseInt(year));
+                setSelectedPastEvent(pastEvents[year][0]);
+              }}
+            >
+              {year}
+            </button>
+          ))}
+        </div>
+        <div className="past-events-list">
+          {pastEvents[selectedYear].map((event) => (
+            <button
+              key={event.id}
+              className={`past-event-button ${selectedPastEvent.id === event.id ? 'active' : ''}`}
+              onClick={() => setSelectedPastEvent(event)}
+            >
+              {event.name}
+            </button>
+          ))}
+        </div>
+        <div className="past-event-details">
+          <p className="event-description">{selectedPastEvent.description}</p>
+        </div>
+        <div className="event-gallery-wrapper">
+          <div className="gallery-images">
+            <div className="gallery-image-placeholder"></div>
+            <div className="gallery-image-placeholder"></div>
+            <div className="gallery-image-placeholder"></div>
           </div>
-          <div className="past-events-wrapper">
-            <div className="past-events1">
-              <div className="frame-parent4">
-                <button className="past-event-wrapper">
-                  <div className="button-text">Event Name</div>
-                </button>
-              </div>
-              <div className="frame-parent4">
-                <button className="past-event-wrapper">
-                  <div className="button-text">Event Name</div>
-                </button>
-                <button className="past-event-wrapper">
-                  <div className="button-text">Event Name</div>
-                </button>
-              </div>
-              <div className="frame-parent4">
-                <button className="past-event-wrapper">
-                  <div className="button-text">Event Name</div>
-                </button>
-                <button className="past-event-wrapper">
-                  <div className="button-text">Event Name</div>
-                </button>
-              </div>
-              <div className="frame-parent4">
-                <button className="past-event-wrapper">
-                  <div className="button-text">Event Name</div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="frame-wrapper3">
-            <div className="event-description-parent">
-              <div className="event-description"></div>
-              <div className="lorem-ipsum-dolor-container1">
-                <p className="lorem-ipsum-dolor2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-                </p>
-                <p className="blank-line2">&nbsp;</p>
-                <p className="blank-line3">&nbsp;</p>
-              </div>
-            </div>
-          </div>
-          <div className="frame-wrapper4">
-            <div className="frame-parent5">
-              <div className="rectangle-group">
-                <div className="rectangle-div"></div>
-                <div className="frame-child1"></div>
-                <div className="frame-child2"></div>
-              </div>
-              <div className="gallery-callto-action">
-                <button className="view-event-gallery-wrapper">
-                  <div className="view-event-gallery">VIEW EVENT GALLERY</div>
-                </button>
-              </div>
-            </div>
-          </div>
+          <button className="view-gallery-button">VIEW EVENT GALLERY</button>
         </div>
       </section>
-      
-      <Footer/>
+      <Footer />
     </div>
   );
 }
