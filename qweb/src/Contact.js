@@ -36,7 +36,7 @@ function Contact(){
 
 
     return (
-        <div className='Contact'>
+        <div className='Contact' id="root">
             <Header />
             <h1>Contact.</h1>
             
@@ -168,7 +168,10 @@ function Contact(){
                 </div>
 
             </div>
-            <Footer />
+            <footer>
+                <Footer />
+            </footer>
+            
             
         </div>
     );
