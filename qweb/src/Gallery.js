@@ -36,48 +36,21 @@ function Gallery(){
           </p>
         </div>
 
-<section class="frame-wrapper6">
-  <div class="frame-parent6">
-    <div class="rectangle-container">
-      <div class="frame-child4"></div>
-      <div class="rectangle-textarea"></div>
-      <div class="frame-child5"></div>
-    </div>
-    <div class="footer-background4">
-
-      <div class="footer-background-child"></div>
-      <div class="footer-background-item"></div>
-
-      <div class="footer-divider"></div>
-      <div class="footer-background-inner"></div>
-      <div class="footer-background-child1"></div>
-      <div class="footer-background-child2"></div>
-
-
-      <div class="footer-background-child3"></div>
-      <div class="rectangle-parent1">
-        <div class="frame-child6"></div>
-        <div class="title-artist-name-container">
-          <p class="title">
-            <b>“Title”</b>
-          </p>
-          <p class="artist-name">Artist Name</p>
-        </div>
-        <div class="mediums-wrapper">
-          <div class="mediums">Mediums</div>
+      <div class="below-banner">
+        <div class="rectangle-parent1">
+          <div class="title-artist-name-container">
+            <p class="art-title">
+              <b>“Title”</b>
+            </p>
+            <p class="artist-name">Artist Name</p>
+          </div>
+          <div class="mediums-wrapper">
+            <div class="mediums">Mediums</div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 </main>
-
-
-
-
-
-
-            <Footer/>
+         <Footer/>
         </div>
     )
 }
