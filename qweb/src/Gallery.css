@@ -3,37 +3,75 @@ hr.solid {
 }
 
 .years-button{
-  background-color: #f2f2f2;
+  cursor: pointer;
+  background-color: #f2f2f2; /* Green */
+  border: 3px solid #cbc3e1;
+  padding: 10px 26px;
+  align-self: stretch;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px #cbc3e1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .years-button:hover{
-  background-color: var(--color-gainsboro);
-  border: 3px solid var(--color-lightslategray-100);
+  background-color: #dcdcdc;
+  border: 3px solid #778899;
   box-sizing: border-box;
 }
 
 .years-button:focus{
-  background-color: var(--color-slategray);
-  border: 3px solid var(--color-lightslategray-100);
+  background-color: #766b94;
+  border: 3px solid #778899;
   box-sizing: border-box;
   color:white;
 }
 
+.years-text{
+  position: relative;
+  font-size: 32px;
+  font-family: "Helvetica";
+  color: #1a1a1a;
+  text-align: left;
+}
+
 .events-button{
-  background-color: #f2f2f2;
+  cursor: pointer;
+  background-color: #f2f2f2; /* Green */
+  border: 3px solid #cbc3e1;
+  padding: 10px 26px;
+  align-self: stretch;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px #cbc3e1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .events-button:hover{
-  background-color: var(--color-gainsboro);
-  border: 3px solid var(--color-lightslategray-100);
+  background-color: #dcdcdc;
+  border: 3px solid #778899;
   box-sizing: border-box;
 }
 
 .events-button:focus{
-  background-color: var(--color-slategray);
-  border: 3px solid var(--color-lightslategray-100);
+  background-color: #766b94;
+  border: 3px solid #778899;
   box-sizing: border-box;
   color:white;
+}
+
+.events-text{
+  position: relative;
+  font-size: 32px;
+  font-family: "Helvetica";
+  color: #1a1a1a;
+  text-align: left;
 }
 
 .years-container {
@@ -50,5 +88,16 @@ hr.solid {
 }
 
 .event-desc {
-  font-size: 32px;
+  font-size: 30px;
+}
+
+h1 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #1A1A1A;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  padding-top: 20Px;
 }

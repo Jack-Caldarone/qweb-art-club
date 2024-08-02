@@ -10,19 +10,19 @@ function Gallery(){
               <h1>Gallery.</h1>
 
               <div class="years-container">
-                <button class="years-button">2023</button>
-                <button class="years-button"> 2024</button>
+                <button class="years-button"><div class="years-text">2023</div></button>
+                <button class="years-button"><div class="years-text">2024</div></button>
               </div>
 
         <hr class="solid"></hr>
 
         <div class="years-container">
-          <button class="events-button">Event Name</button>
-          <button class="events-button">Event Name</button>
-          <button class="events-button">Event Name</button>
-          <button class="events-button">Event Name</button>
-          <button class="events-button">Event Name</button>
-          <button class="events-button">Event Name</button>
+          <button class="events-button"><div class="events-text">Event Name</div></button>
+          <button class="events-button"><div class="events-text">Event Name</div></button>
+          <button class="events-button"><div class="events-text">Event Name</div></button>
+          <button class="events-button"><div class="events-text">Event Name</div></button>
+          <button class="events-button"><div class="events-text">Event Name</div></button>
+          <button class="events-button"><div class="events-text">Event Name</div></button>
         </div>
 
 
