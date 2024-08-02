@@ -36,6 +36,12 @@ footer {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   }
 
+.text {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .copyright {
     align-self: stretch;
     font-size: 12px;
@@ -55,6 +61,10 @@ footer {
 
 }
 
+.horizontal-line {
+  display: none;
+}
+
 .art-club-parent {
   padding: 30px;
   justify-content: center;
@@ -65,4 +75,53 @@ footer {
   padding: 30px;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 800px){
+  .container, .club-text{
+    display: block;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  footer {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+
+  }
+
+  .horizontal-line {
+    width: 75%;
+    border-bottom: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+
+
 }
