@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './Header.css';
 
 // function hamburgerMenu(){
@@ -12,21 +12,30 @@ import './Header.css';
 // }
 
 function Header(){
+    const [isOpen, setIsOpen] = useState(false);
+        
+    const toggle = () => {
+            setIsOpen(!isOpen);
+        }
+
+
     return(
         <header className="header" id="headerMenu">
-            
-            <nav>
-                <a href="/">Home.</a>
-                <a href="/AboutUs">About Us.</a>
-                <a href="/events">Events.</a>
-                <a href="/gallery">Gallery.</a>
-                <a href="/contact">Contact.</a>
-            </nav>
-            <div class="hamburger" onclick="hamburgerMenu()">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="hamburger" onclick={toggle}>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
+            <nav className={`menu ${isOpen ? 'open' : ''}`}>
+                <ul>
+                    <a href="/">Home.</a>
+                    <a href="/about-us">About Us.</a>
+                    <a href="/events">Events.</a>
+                    <a href="/gallery">Gallery.</a>
+                    <a href="/contact">Contact.</a>
+                </ul>
+            </nav>
+            
         </header>
     );
 }
