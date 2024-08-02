@@ -108,32 +108,3 @@
     
 
 }
-
-.submit-btn {
-    background-color: #1A1A1A;
-    color: white;
-    font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 23px;
-    font-weight: 200;
-    display: flex;
-    max-width: fit-content;
-    padding: 10px 20px;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-}
-
-.submit-btn:hover {
-    background-color: #766B94;
-}
-
-.submit-btn:active {
-    background-color: #5a5274;
-}
-
-.button-div {
-    align-items: flex-end;
-    justify-content: flex-end;
-    display: flex;
-    margin-left: 349px;
-}
