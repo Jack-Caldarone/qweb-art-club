@@ -18,7 +18,6 @@ function Home() {
         <h1> Materials, a Space, Create</h1>
       </div>
 
-      <Footer/>
       <div id="LatestEvent">
         <div id="LatestEventTitle">
           <h2>Latest Event Date</h2>
@@ -26,9 +25,8 @@ function Home() {
         <div id="LatestEventDescription">
           <p>This is the description of the latest event dsadasda</p>
         </div>
-        <div id="LastestEventPhoto">
+        <div id="LatestEventPhoto">
           <img src={require('./imageHomeSource/LatestEventPhoto.png')} alt="An image of recent event" id="LatestEventItem" />
-
         </div>
         <div id="LearnMoreButton">
           <button>Learn More</button>
@@ -37,18 +35,22 @@ function Home() {
       
       <div id="GalleryView">
         <div class="GalleryPhoto">
-          <img src={require('./imageHomeSource/GalleryImage1.jpg')} alt="Logo" id="GalleryItem1" />
+          <a href="/gallery"><img src={require('./imageHomeSource/GalleryImage1.jpg')} alt="Logo" id="GalleryItem1" /></a>
         </div>
         <div class="GalleryPhoto">
-          <img src={require('./imageHomeSource/GalleryImage2.jpg')} alt="Logo" id="GalleryItem2" />
+          <a href="/gallery"><img src={require('./imageHomeSource/GalleryImage2.jpg')} alt="Logo" id="GalleryItem2" href="/gallery" /></a>
         </div>
         <div class="GalleryPhoto">
-          <img src={require('./imageHomeSource/GalleryImage3.jpg')} alt="Logo" id="GalleryItem3" />
+          <a href="/gallery"><img src={require('./imageHomeSource/GalleryImage3.jpg')} alt="Logo" id="GalleryItem3" href="/gallery"/></a>
         </div>
+      </div>  
+      <div id="GalleryExtra">
+      
         <p id="GalleryDescription">Take a look at our collection of student-made artwork from our past events</p>
         <button id="GalleryButton"><a id="GalleryLink" href="/gallery">View Our Gallery</a></button>
       </div>  
 
+      <Footer/>
 
     </div>
 
