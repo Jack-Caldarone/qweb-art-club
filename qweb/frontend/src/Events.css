@@ -202,36 +202,3 @@ a {
 .view-gallery-button:hover {
   background-color: #CCC4E2;
 }
-
-footer {
-  background-color: #1A1A1A;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: px;
-  position: sticky; /* Change from fixed to sticky */
-  bottom: 0; /* Ensure it sticks to the bottom */
-}
-
-footer a {
-  color: white;
-  position: relative;
-  display: inline-block;
-  min-width: 120px;
-  text-decoration: none;
-  padding: 0 10px;
-}
-
-footer b {
-  color: white;
-  font-size: 20px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-footer p {
-  color: white;
-  margin: 0;
-  font-size: 17px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
