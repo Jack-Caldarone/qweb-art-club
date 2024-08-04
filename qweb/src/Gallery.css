@@ -102,27 +102,53 @@ hr.solid {
   padding-top: 20Px;
 }
 
-.belowbanner{
-  align-items: center;
-  align-self: center;
-  align-content: center;
-}
 
-.rectangle-parent1 {
-  position: absolute;
-  /* top: 0; */
-  /* left: 0; */
+/* Photo Section */
+
+.black-box {
   align-self: center;
+  align-items: center;
+  text-align: center;
   background-color: #353232;
+  margin: auto;
   width: 505px;
   flex-direction: column;
-  align-items: center;
   padding: 47px 20px 47px 22px;
   box-sizing: border-box;
-  gap: var(--gap-5xl);
   max-width: 100%;
 }
 
-.art-title{
-  
+.title-artist-name-container {
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  width: 211px;
+  height: 97px;
+}
+
+b.title{
+  align-self: center;
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 40px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+p.artist{
+  align-self: center;
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 40px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.mediums-wrapper {
+  flex-direction: row;
+  text-align: center;
+  padding: 0 57px 0 54px;
+  font-size: var(--font-size-5xl);
+  display: flex;
+  justify-content: flex-start;
 }
