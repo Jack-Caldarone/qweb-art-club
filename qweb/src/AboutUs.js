@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import Footer from './Footer';
+import './Contact.css';
+import './Gallery.css';
+
+import { createTheme, styled, ThemeProvider} from "@mui/material/styles";
+
 
 function AboutUs() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="AboutUs">
+      <Header/>
+      <h1> About Us. </h1>
+      <Footer />
+
+      <div class="event-desc-container">
+          <p class="event-desc">
+            Meet our wonderful team!
+          </p>
+      </div>
+
     </div>
   );
 }

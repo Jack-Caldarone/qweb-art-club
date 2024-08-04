@@ -1,3 +1,5 @@
+
+
 .header{
     background-color: #1A1A1A;
     color: white;
@@ -17,6 +19,7 @@
 }
 
 .hamburger{
+    cursor: pointer;
     display: none;
     justify-content: left;
     align-items: left;
@@ -32,7 +35,7 @@
     align-items: left;
 }
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1200px){
     .header a{
         display: none;
     }
