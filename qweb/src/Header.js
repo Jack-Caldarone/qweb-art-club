@@ -29,7 +29,7 @@ function Header(){
             <nav className={`menu ${isOpen ? 'open' : ''}`}>
                 <ul>
                     <a href="/">Home.</a>
-                    <a href="/about-us">About Us.</a>
+                    <a href="/aboutus">About Us.</a>
                     <a href="/events">Events.</a>
                     <a href="/gallery">Gallery.</a>
                     <a href="/contact">Contact.</a>
