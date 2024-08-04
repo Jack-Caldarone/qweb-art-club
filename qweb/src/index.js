@@ -14,11 +14,12 @@ export default function App(){
   return (
     <BrowserRouter>
     <Routes>
-      <Route index path='/' element={<Home/>}/>
       <Route path='/aboutus' element={<AboutUs/>}/>
       <Route path='/events' element={<Events/>}/>
       <Route path='/gallery' element={<Gallery/>}/>
       <Route path='/contact' element={<Contact/>}/>
+      <Route index path='/' element={<Home/>}/> 
+
     </Routes>
   </BrowserRouter>
   )
@@ -27,6 +28,6 @@ export default function App(){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+    <App />
   </React.StrictMode>
 );

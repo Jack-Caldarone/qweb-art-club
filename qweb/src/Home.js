@@ -1,6 +1,4 @@
 
-
-import React from "react"
 import "./Home.css";
 import "./main.css";
 import Header from './Header';
@@ -20,16 +18,16 @@ function Home() {
 
       <div id="LatestEvent">
         <div id="LatestEventTitle">
-          <h2>Latest Event Date</h2>
+          <h2 id="LatestEventTitleItem">Latest Event Date</h2>
         </div>
         <div id="LatestEventDescription">
-          <p>This is the description of the latest event dsadasda</p>
+          <p id="DescriptionItem">TLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies posuere enim nec sodales. Maecenas ultrices nisi lacus, et laoreet mi dapibus at. Fusce ex sem, pharetra varius sem bibendum, blandit pellentesque sem. Praesent non orci ipsum. Etiam consectetur tortor quis magna consequat aliquam. Donec mattis arcu augue, sed ultrices eros auctor in. </p>
         </div>
         <div id="LatestEventPhoto">
           <img src={require('./imageHomeSource/LatestEventPhoto.png')} alt="An image of recent event" id="LatestEventItem" />
         </div>
         <div id="LearnMoreButton">
-          <button>Learn More</button>
+        <a id="LearnMoreButtonItemLink" href=""> <button id="LearnMoreButtonItem">Learn More</button></a>
         </div>
       </div>
       
