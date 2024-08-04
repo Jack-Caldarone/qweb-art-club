@@ -1,6 +1,4 @@
 
-
-import React from "react"
 import "./Home.css";
 import "./main.css";
 import Header from './Header';
@@ -18,37 +16,39 @@ function Home() {
         <h1> Materials, a Space, Create</h1>
       </div>
 
-      <Footer/>
       <div id="LatestEvent">
         <div id="LatestEventTitle">
-          <h2>Latest Event Date</h2>
+          <h2 id="LatestEventTitleItem">Latest Event Date</h2>
         </div>
         <div id="LatestEventDescription">
-          <p>This is the description of the latest event dsadasda</p>
+          <p id="DescriptionItem">TLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies posuere enim nec sodales. Maecenas ultrices nisi lacus, et laoreet mi dapibus at. Fusce ex sem, pharetra varius sem bibendum, blandit pellentesque sem. Praesent non orci ipsum. Etiam consectetur tortor quis magna consequat aliquam. Donec mattis arcu augue, sed ultrices eros auctor in. </p>
         </div>
-        <div id="LastestEventPhoto">
+        <div id="LatestEventPhoto">
           <img src={require('./imageHomeSource/LatestEventPhoto.png')} alt="An image of recent event" id="LatestEventItem" />
-
         </div>
         <div id="LearnMoreButton">
-          <button>Learn More</button>
+        <a id="LearnMoreButtonItemLink" href=""> <button id="LearnMoreButtonItem">Learn More</button></a>
         </div>
       </div>
       
       <div id="GalleryView">
         <div class="GalleryPhoto">
-          <img src={require('./imageHomeSource/GalleryImage1.jpg')} alt="Logo" id="GalleryItem1" />
+          <a href="/gallery"><img src={require('./imageHomeSource/GalleryImage1.jpg')} alt="Logo" id="GalleryItem1" /></a>
         </div>
         <div class="GalleryPhoto">
-          <img src={require('./imageHomeSource/GalleryImage2.jpg')} alt="Logo" id="GalleryItem2" />
+          <a href="/gallery"><img src={require('./imageHomeSource/GalleryImage2.jpg')} alt="Logo" id="GalleryItem2" href="/gallery" /></a>
         </div>
         <div class="GalleryPhoto">
-          <img src={require('./imageHomeSource/GalleryImage3.jpg')} alt="Logo" id="GalleryItem3" />
+          <a href="/gallery"><img src={require('./imageHomeSource/GalleryImage3.jpg')} alt="Logo" id="GalleryItem3" href="/gallery"/></a>
         </div>
+      </div>  
+      <div id="GalleryExtra">
+      
         <p id="GalleryDescription">Take a look at our collection of student-made artwork from our past events</p>
         <button id="GalleryButton"><a id="GalleryLink" href="/gallery">View Our Gallery</a></button>
       </div>  
 
+      <Footer/>
 
     </div>
 
