@@ -3,37 +3,75 @@ hr.solid {
 }
 
 .years-button{
-  background-color: #f2f2f2;
+  cursor: pointer;
+  background-color: #f2f2f2; /* Green */
+  border: 3px solid #cbc3e1;
+  padding: 10px 26px;
+  align-self: stretch;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px #cbc3e1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .years-button:hover{
-  background-color: var(--color-gainsboro);
-  border: 3px solid var(--color-lightslategray-100);
+  background-color: #dcdcdc;
+  border: 3px solid #778899;
   box-sizing: border-box;
 }
 
 .years-button:focus{
-  background-color: var(--color-slategray);
-  border: 3px solid var(--color-lightslategray-100);
+  background-color: #766b94;
+  border: 3px solid #778899;
   box-sizing: border-box;
   color:white;
 }
 
+.years-text{
+  position: relative;
+  font-size: 32px;
+  font-family: "Helvetica";
+  color: #1a1a1a;
+  text-align: left;
+}
+
 .events-button{
-  background-color: #f2f2f2;
+  cursor: pointer;
+  background-color: #f2f2f2; /* Green */
+  border: 3px solid #cbc3e1;
+  padding: 10px 26px;
+  align-self: stretch;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px #cbc3e1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .events-button:hover{
-  background-color: var(--color-gainsboro);
-  border: 3px solid var(--color-lightslategray-100);
+  background-color: #dcdcdc;
+  border: 3px solid #778899;
   box-sizing: border-box;
 }
 
 .events-button:focus{
-  background-color: var(--color-slategray);
-  border: 3px solid var(--color-lightslategray-100);
+  background-color: #766b94;
+  border: 3px solid #778899;
   box-sizing: border-box;
   color:white;
+}
+
+.events-text{
+  position: relative;
+  font-size: 32px;
+  font-family: "Helvetica";
+  color: #1a1a1a;
+  text-align: left;
 }
 
 .years-container {
@@ -50,5 +88,67 @@ hr.solid {
 }
 
 .event-desc {
-  font-size: 32px;
+  font-size: 30px;
+}
+
+.h1 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #1A1A1A;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  padding-top: 20Px;
+}
+
+
+/* Photo Section */
+
+.black-box {
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  background-color: #353232;
+  margin: auto;
+  width: 505px;
+  flex-direction: column;
+  padding: 47px 20px 47px 22px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.title-artist-name-container {
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  width: 211px;
+  height: 97px;
+}
+
+b.title{
+  align-self: center;
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 40px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+p.artist{
+  align-self: center;
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 40px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.mediums-wrapper {
+  flex-direction: row;
+  text-align: center;
+  padding: 0 57px 0 54px;
+  font-size: var(--font-size-5xl);
+  display: flex;
+  justify-content: flex-start;
 }
