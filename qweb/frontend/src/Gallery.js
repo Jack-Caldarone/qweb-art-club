@@ -11,32 +11,43 @@ export default class Gallery extends React.Component{
     yearsButtons: [],
     eventsButtons: [],
     allEvents: [],
+    allYears: []
   }
-
-
-
 
   componentDidMount(){
     axios.get('http://localhost:8000/api/events')
       .then(res => {
         const events = res.data;
         this.setState({ allEvents: events});
+        const years = [];
+        events.map(i => {
+          if (!years.includes(i.Year))
+          years.push(i.Year);
+        });
+        this.setState({ allYears : years })
+        const yearsButtons = years.map(i => {
+          return <button class="years-button"><div class="years-text">{i}</div></button>
+        })
+        this.setState({ yearsButtons })
       });
   }
 
-
   render(){
-    console.log(this.state.allEvents)
+    // console.log(this)
     return(
       <div className="Gallery">
         <Header/>
         <main class="frame-main">
           <h1>Gallery.</h1>
 
-          <div class="years-container">
+          {/* <div class="years-container">
             <button class="years-button"><div class="years-text">2023</div></button>
             <button class="years-button"><div class="years-text">2024</div></button>
-          </div>
+          </div> */}
+
+          <div class="years-container">
+            {this.state.yearsButtons}
+          </div>       
 
           <hr class="solid"></hr>
 
