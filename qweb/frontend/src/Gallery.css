@@ -122,16 +122,8 @@ hr.solid {
   padding: 47px 20px 47px 22px;
   box-sizing: border-box;
   max-width: 100%;
-}
-
-.title-artist-name-container {
-  align-items: center;
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  width: 211px;
-  height: 97px;
+  justify-content: center;
+  display: flex;
 }
 
 b.title{
@@ -140,14 +132,7 @@ b.title{
   color: #f2f2f2;
   font-size: 40px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-p.artist{
-  align-self: center;
-  text-align: center;
-  color: #f2f2f2;
-  font-size: 40px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-style: italic;
 }
 
 p.artist{
@@ -156,19 +141,15 @@ p.artist{
   color: #f2f2f2;
   font-size: 30px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-.mediums-wrapper {
-  flex-direction: row;
-  text-align: center;
-  padding: 0 57px 0 54px;
-  font-size: 30px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  width: 211px;
-  height: 97px;
+}
+
+p.mediums{
+  align-self: center;
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 30px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  display: flex;
+  margin: 0;
 }
