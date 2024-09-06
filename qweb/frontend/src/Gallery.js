@@ -20,10 +20,8 @@ export default class Gallery extends React.Component{
     bannerText: "",
     artTitle: "",
     artistName: "",
-    artMediums: ""
-
+    artMediums: "",
   }
-
 
   handleYearButtonClick = (year) => {
     this.setState({ selectedYearButton: year, selectedYear : year });
@@ -45,7 +43,6 @@ export default class Gallery extends React.Component{
         });
         this.setState({ allYears : years });
         const yearsButtons = years.map(i => {
-          // return <button class="years-button" onClick={() => this.setState({selectedYear : i})}><div class="years-text">{i}</div></button>
           return <button class={`years-button ${this.state.selectedYear === i ? 'focused' : ''}`} onClick={() => this.handleYearButtonClick(i)}><div class="years-text">{i}</div></button>
         });
         this.setState({ yearsButtons });;
@@ -56,8 +53,7 @@ export default class Gallery extends React.Component{
       });
     axios.get('http://localhost:8000/api/artwork')
       .then(res => {
-        const art = res.data;
-        this.setState({ allArt : art })
+        this.setState({ allArt : res.data })
       })
   }
 
@@ -93,7 +89,19 @@ export default class Gallery extends React.Component{
             <p class="mediums">{this.state.artMediums}</p>
           </div>
 
-            {this.state.allArt.map(art => {if (art.Event == this.state.selectedEvent){return <img src={require('./ArtFolder/images.jpg')} onClick={() => this.setState({artistName :  art.Artist, artTitle : art.Name, artMediums : art.Mediums})} ></img>}})}
+          {this.state.allArt.map(art => {
+            if (art.Event == this.state.selectedEvent){
+              const imagePath = `./ArtFolder/${art.Photo}`;
+              console.log(imagePath)
+              return (
+                <img 
+                  src={require(`./ArtFolder/images.jpg`)} 
+                  alt={art.Name}
+                  onClick={() => this.setState({artistName :  art.Artist, artTitle : art.Name, artMediums : art.Mediums})}
+                />
+              )
+            }
+          })};
 
         </main>
         <Footer/>
