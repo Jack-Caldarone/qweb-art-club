@@ -88,13 +88,9 @@ export default class Gallery extends React.Component{
           <br/>
 
           <div class="black-box">
-            <div class="title-artist-name-container">
-              <b class="title">{this.state.artTitle}</b>
-              <p class="artist">{this.state.artistName}</p>
-            </div>
-            <div class="mediums-wrapper">
-              <p class="mediums">{this.state.artMediums}</p>
-            </div>
+            <b class="title">{this.state.artTitle}</b>
+            <p class="artist">{this.state.artistName}</p>
+            <p class="mediums">{this.state.artMediums}</p>
           </div>
 
             {this.state.allArt.map(art => {if (art.Event == this.state.selectedEvent){return <img src={require('./ArtFolder/images.jpg')} onClick={() => this.setState({artistName :  art.Artist, artTitle : art.Name, artMediums : art.Mediums})} ></img>}})}
