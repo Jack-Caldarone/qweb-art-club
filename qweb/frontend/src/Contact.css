@@ -75,6 +75,8 @@
 
 .submit-btn:hover {
     background-color: #766B94;
+    transition: .3s;
+    transform: scale(1.15);
 }
 
 .submit-btn:active {

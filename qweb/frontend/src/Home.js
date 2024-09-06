@@ -26,7 +26,7 @@ function Home() {
           <h2 id="LatestEventTitleItem">Latest Event Name.</h2>
           <p id="DescriptionItem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies posuere enim nec sodales. Maecenas ultrices nisi lacus, et laoreet mi dapibus at. Fusce ex sem, pharetra varius sem bibendum, blandit pellentesque sem. Praesent non orci ipsum. Etiam consectetur tortor quis magna consequat aliquam. Donec mattis arcu augue, sed ultrices eros auctor in. </p>
           <button id="LearnMoreButton">
-            <a href="/events">Learn More</a>
+            <a href="/events" id='Link'>Learn More</a>
           </button>
         </div>
       </div>
@@ -53,7 +53,7 @@ function Home() {
           <a href="/gallery"><img src={require('./imageHomeSource/GalleryImage3.jpg')} alt="Dagger by Student" id="GalleryPhoto"/></a>
         </div>
         <p>Take a look at our collection of student-made artwork from our past events.</p>
-        <button id="GalleryButton"><a id="GalleryLink" href="/gallery">View Our Gallery</a></button>
+        <button id="GalleryButton"><a id='Link' href="/gallery">View Our Gallery</a></button>
 
       </div>
       {/* <div id="GalleryView">

@@ -118,7 +118,9 @@ a {
 }
 
 .register-button:hover {
-  background-color: #CFC6D9;
+  background-color: #5a5172;
+  transition: .2s;
+  transform: scale(1.05);
 }
 
 .past-events-section {
@@ -227,7 +229,9 @@ a {
 }
 
 .view-gallery-button:hover {
-  background-color: #CCC4E2;
+  background-color: #766B94;
+  transition: .4s;
+  transform: scale(1.15);
 }
 
 @media screen and (max-width: 1000px){
