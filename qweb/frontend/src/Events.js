@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Header from './Header';
 
 const upcomingEvents = [
-  { id: 1, name: 'Event Name 1', description: 'Description for Event Name 1', time: '6:00 PM - 7:00 PM', location: 'Kingston Hall, Room 200' },
+  { id: 1, name: 'Event Name 1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', time: '6:00 PM - 7:00 PM', location: 'Kingston Hall, Room 200' },
   { id: 2, name: 'Event Name 2', description: 'Description for Event Name 2', time: '7:00 PM - 8:00 PM', location: 'Kingston Hall, Room 201' },
   { id: 3, name: 'Event Name 3', description: 'Description for Event Name 3', time: '8:00 PM - 9:00 PM', location: 'Kingston Hall, Room 202' },
   { id: 4, name: 'Event Name 4', description: 'Description for Event Name 4', time: '9:00 PM - 10:00 PM', location: 'Kingston Hall, Room 203' },
@@ -44,7 +44,7 @@ function Events() {
       <section className="events-inner">
         <div className="events-wrapper">
           <div className="upcoming-events-section">
-            <h1 className="section-title">Upcoming Events.</h1>
+            <h1>Upcoming Events.</h1>
             <div className="upcoming-events-list">
               {upcomingEvents.map((event) => (
                 <button
@@ -59,7 +59,7 @@ function Events() {
           </div>
           <div className="event-details-section">
             <div className="event-details">
-              <h3 className="event-title">{selectedUpcomingEvent.name}</h3>
+              <h2>{selectedUpcomingEvent.name}</h2>
               <p className="event-description">{selectedUpcomingEvent.description}</p>
               <div className="event-timing-location">
                 <p>{selectedUpcomingEvent.time}</p>
@@ -71,7 +71,7 @@ function Events() {
         </div>
       </section>
       <section className="past-events-section">
-        <h1 className="section-title">Past Events.</h1>
+        <h2 className="section-title">Past Events.</h2>
         <div className="year-buttons-wrapper">
           {Object.keys(pastEvents).map((year) => (
             <button
