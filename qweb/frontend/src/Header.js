@@ -16,7 +16,6 @@ function Header(){
         
     const toggle = () => {
         setIsOpen(!isOpen);
-        console.log(`Menu is now ${!isOpen ? 'open' : 'closed'}`);
     };
 
 
