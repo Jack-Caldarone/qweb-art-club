@@ -7,15 +7,24 @@
     justify-content: center;
     align-items: center;
     padding: 25px 30px;
+    flex-direction: row;
+    column-gap: 30px;
+
 }
 
-.header a{
+.menu a{
     color: rgb(242, 242, 242);
     text-decoration: none;
     font-weight: bold;
     font-size: 21px;
-    padding: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.menu a:hover{
+    transition: .2s;
+    transform: scale(1.2);
 }
 
 .hamburger{
@@ -23,39 +32,73 @@
     display: none;
     justify-content: left;
     align-items: left;
+    flex-direction: column;
 }
 
 .bar{
     display: block;
     width: 25px;
     height: 3px;
-    margin: 5px auto;
+    margin: 3px auto;
     background-color: white;
     justify-content: left;
     align-items: left;
+    transition: 0.4s;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 @media screen and (max-width: 1200px){
-    .header a{
-        display: none;
+    .header {
+        display: flex;
+        flex-direction: column;
+        column-gap: 0px;
+        transition: max-height 0.5s ease;
     }
 
     .hamburger{
-        float: right;
-        display: block;
-        justify-content: left;
-        align-items: left;
-    }
-    .hamburger.responsive {
-        position: absolute;
-        right: 0;
-        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .header.responsive a{
-        float: none;
-        display: block;
-        text-align: left;
+    .menu {
+        transition: 2.0s ease;
+        opacity: 0;
+        transition: max-height 0.5s ease;
+        
     }
+
+    .menu.open {
+        max-height: 300px;
+        opacity: 1;
+    }
+
+    .menu ul{
+        display: none;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 0px;
+        row-gap: 10px;
+    }
+
+    .menu.open ul{
+        display: flex;
+        margin-right: 30px;
+    }
+
+
+
+    .menu a {
+        text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 25px;
+    }
+
 
 }
