@@ -15,18 +15,18 @@ function Header(){
     const [isOpen, setIsOpen] = useState(false);
         
     const toggle = () => {
-            setIsOpen(!isOpen);
-        }
+        setIsOpen(!isOpen);
+    };
 
 
     return(
-        <header className="header" id="headerMenu">
-            <div class="hamburger" onclick={toggle}>
+        <header class="header" id="headerMenu">
+            <div class="hamburger" onClick={toggle}>
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <nav className={`menu ${isOpen ? 'open' : ''}`}>
+            <nav class={`menu ${isOpen ? 'open' : ''}`}>
                 <ul>
                     <a href="/">Home.</a>
                     <a href="/aboutus">About Us.</a>
