@@ -9,67 +9,99 @@ export default class Gallery extends React.Component{
 
   state = {
     yearsButtons: [],
-    eventsButtons: [],
+    allEventsButtons: [],
     allEvents: [],
+    allYears: [],
+    allArt: [],
+    selectedYear: 0,
+    selectedEvent: "",
+    selectedYearButton: null,
+    selectedEventButton: null,
+    bannerText: "",
+    artTitle: "",
+    artistName: "",
+    artMediums: "",
   }
 
+  handleYearButtonClick = (year) => {
+    this.setState({ selectedYearButton: year, selectedYear : year });
+  };
 
-
+  handleEventButtonClick = (event) => {
+    this.setState({ selectedEventButton: event });
+  };
 
   componentDidMount(){
     axios.get('http://localhost:8000/api/events')
       .then(res => {
         const events = res.data;
         this.setState({ allEvents: events});
+        const years = [];
+        events.map(i => {
+          if (!years.includes(i.Year))
+          years.push(i.Year);
+        });
+        this.setState({ allYears : years });
+        const yearsButtons = years.map(i => {
+          return <button class={`years-button ${this.state.selectedYear === i ? 'focused' : ''}`} onClick={() => this.handleYearButtonClick(i)}><div class="years-text">{i}</div></button>
+        });
+        this.setState({ yearsButtons });;
+        const allEventsButtons = events.map(i => {
+          return <button class="events-button" key={i.Year} onClick={() => this.setState({bannerText : i.Desc, selectedEvent : i.Name})}><div class="events-text">{i.Name}</div></button>
+        });
+        this.setState({ allEventsButtons });
       });
+    axios.get('http://localhost:8000/api/artwork')
+      .then(res => {
+        this.setState({ allArt : res.data })
+      })
   }
 
-
   render(){
-    console.log(this.state.allEvents)
     return(
       <div className="Gallery">
         <Header/>
         <main class="frame-main">
           <h1>Gallery.</h1>
-
           <div class="years-container">
-            <button class="years-button"><div class="years-text">2023</div></button>
-            <button class="years-button"><div class="years-text">2024</div></button>
-          </div>
+            {this.state.yearsButtons}
+          </div>       
 
           <hr class="solid"></hr>
 
           <div class="years-container">
-            <button class="events-button"><div class="events-text">Event Name</div></button>
-            <button class="events-button"><div class="events-text">Event Name</div></button>
-            <button class="events-button"><div class="events-text">Event Name</div></button>
-            <button class="events-button"><div class="events-text">Event Name</div></button>
-            <button class="events-button"><div class="events-text">Event Name</div></button>
-            <button class="events-button"><div class="events-text">Event Name</div></button>
+            {this.state.allEventsButtons.map(event => {if(event.key == this.state.selectedYear){return event}})}
           </div>
 
           <br/>
 
           <div class="event-desc-container">
             <p class="event-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim.
+              {this.state.bannerText}
             </p>
           </div>
           
           <br/>
 
           <div class="black-box">
-            <div class="title-artist-name-container">
-              <b class="title">“Title”</b>
-              <p class="artist">Artist Name</p>
-            </div>
-            <div class="mediums-wrapper">
-              <div class="mediums">Mediums</div>
-            </div>
+            <b class="title">{this.state.artTitle}</b>
+            <p class="artist">{this.state.artistName}</p>
+            <p class="mediums">{this.state.artMediums}</p>
           </div>
+
+          {this.state.allArt.map(art => {
+            if (art.Event == this.state.selectedEvent){
+              const imagePath = `./ArtFolder/${art.Photo}`;
+              console.log(imagePath)
+              return (
+                <img 
+                  src={require(`./ArtFolder/images.jpg`)} 
+                  alt={art.Name}
+                  onClick={() => this.setState({artistName :  art.Artist, artTitle : art.Name, artMediums : art.Mediums})}
+                />
+              )
+            }
+          })};
 
         </main>
         <Footer/>

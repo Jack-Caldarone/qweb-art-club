@@ -8,6 +8,6 @@ class Artwork(models.Model):
     Name = models.CharField(max_length=500)
     Artist = models.CharField(max_length=500)
     Mediums = models.CharField(max_length=500)
-    Photo = models.ImageField()
+    Photo = models.CharField(max_length=500)
     Event = models.CharField(max_length=500)
     Year = models.IntegerField()

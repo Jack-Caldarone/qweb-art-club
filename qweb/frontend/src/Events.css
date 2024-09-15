@@ -1,93 +1,107 @@
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', 'Roboto', sans-serif;
-}
 
 a {
   text-decoration: none;
   color: inherit;
 }
 
-.events-container {
+/* .events-container {
   background: linear-gradient(180deg, #f2f2f2, #cbc3e1);
   padding: 20px;
-}
+} */
 
 .events-inner {
-  padding: 20px 0;
+  margin-top: 30px;
 }
 
 .events-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .section-title {
-  margin: 0;
-  font-weight: 700;
-  font-size: 1.5em;
+  margin-top: 40px;
+  justify-content: center;
+  display: flex;
   margin-bottom: 20px;
+
 }
 
 .upcoming-events-section,
 .past-events-section {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: center;
+  align-self: center;
 }
 
 .upcoming-events-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  width: 70%;
+  justify-content: center;
+  align-self: center;
 }
 
 .event-button {
   cursor: pointer;
-  border: 1px solid var(--color-thistle-200);
   padding: 10px;
-  background-color: var(--color-whitesmoke);
+  background-color: #F2F2F2;
+  border: 2px solid #CBC3E1;
   border-radius: 5px;
   box-shadow: 0 4px 4px #cbc3e1;
   text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 20px;
+  font-weight: 200;
 }
 
 .event-button:hover {
-  background-color: #CFC6D9;
-  border: 1px solid var(--color-lightslategray-100);
+  background-color: #CBC3E1;
+  border: 2px solid #CBC3E1;
 }
 
 .event-button.active {
   background-color: #766B94; /* Change the background color to purple */
-  border: 1px #CDC5E2;
-  color: white; /* Ensure the text color is white */
+  border: 2px solid #766B94; 
+  color: white;
+  font-weight: bold; /* Ensure the text color is white */
 }
 
-.event-details-section {
+/* .event-details-section {
   flex: 1;
-  margin-left: 20px;
-  background-color: #CFC6D9;
+  align-items: center;
+  display: flex;
+  justify-self: flex-start;
+  background: rgba(180, 166, 198, 0.62);
+  width: 80%;
+} */
+
+.event-details-section {
+  background: rgba(180, 166, 198, 0.62);
+  width: 75%;
+  margin-right: 5%;
 }
 
 .event-details {
-  padding: 20px;
-  background-color: var(--color-thistle-100);
-  border-radius: 5px;
-  box-shadow: 0 4px 4px #cbc3e1;
+  padding: 30px;
 }
 
-.event-title {
-  margin: 0;
-  font-weight: 700;
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
 
 .event-description {
-  margin: 0 0 20px 0;
+  justify-content: center;
+  display: flex;
 }
 
-.event-timing-location {
-  margin-bottom: 20px;
+.event-timing-location p{
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 .register-button {
@@ -95,38 +109,47 @@ a {
   border: 0;
   padding: 10px 20px;
   background-color: #766B94;
-  border-radius: 5px;
+  border-radius: 10px;
   color: white;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 23px;
+  font-weight: 200;
 }
 
 .register-button:hover {
-  background-color: #CFC6D9;
+  background-color: #5a5172;
+  transition: .2s;
+  transform: scale(1.05);
 }
 
 .past-events-section {
   text-align: center;
-  margin-top: 40px;
-  background-color: #EBE9F2;
-  padding: 40px 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+  background-color: rgba(255, 255, 255, 0.4);
+  /* padding: 40px 20px; */
+  display: flex;
+  width: 100%;
+  margin-bottom: 60px;
 }
 
 .year-buttons-wrapper {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .year-button {
   cursor: pointer;
   padding: 10px 20px;
-  background-color: var(--color-whitesmoke);
+  background-color: #F2F2F2;
+  font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
   border-radius: 5px;
   box-shadow: 0 4px 4px #cbc3e1;
-  border: none;
+  border: 2px solid #CBC3E1;
 }
 
 .year-button:hover {
@@ -147,13 +170,16 @@ a {
 
 .past-event-button {
   cursor: pointer;
-  border: 1px solid var(--color-thistle-200);
+  border: 2px solid #CBC3E1;
   padding: 10px;
-  background-color: var(--color-whitesmoke);
+  background-color: #F2F2F2;
   border-radius: 5px;
   box-shadow: 0 4px 4px #cbc3e1;
-  flex: 1 0 20%;
-  text-align: left;
+  font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  width: 20%;
+  text-align: center;
 }
 
 .past-event-button:hover {
@@ -168,10 +194,9 @@ a {
 }
 
 .past-event-details {
-  margin-top: 20px;
+  margin-top: 50px;
   padding: 20px;
-  background-color: var(--color-thistle-100);
-  box-shadow: 0 4px 4px #cbc3e1;
+  background: rgba(180, 166, 198, 0.62);
   width: 100%; /* Make it full width */
   text-align: center; /* Center align the text */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
@@ -194,11 +219,33 @@ a {
   cursor: pointer;
   border: 0;
   padding: 10px 20px;
-  background-color: black;
-  border-radius: 5px;
+  background-color: #1A1A1A;
+  font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 21px;
+  font-weight: 200;
+  border-radius: 10px;
   color: white;
+  margin-bottom: 50px;
 }
 
 .view-gallery-button:hover {
-  background-color: #CCC4E2;
+  background-color: #766B94;
+  transition: .4s;
+  transform: scale(1.15);
+}
+
+@media screen and (max-width: 1000px){
+  .events-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .event-details-section {
+    margin-top: 60px;
+  }
+  
+  
+
 }

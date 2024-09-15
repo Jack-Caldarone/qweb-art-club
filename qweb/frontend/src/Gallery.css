@@ -23,11 +23,17 @@ hr.solid {
   box-sizing: border-box;
 }
 
-.years-button:focus{
+/* .years-button:focus{
   background-color: #766b94;
   border: 3px solid #778899;
   box-sizing: border-box;
   color:white;
+} */
+
+.years-button.focused {
+  background-color: #766b94;
+  border: 3px solid #778899;
+  color: white;
 }
 
 .years-text{
@@ -59,12 +65,12 @@ hr.solid {
   box-sizing: border-box;
 }
 
-.events-button:focus{
+/* .events-button:focus{
   background-color: #766b94;
   border: 3px solid #778899;
   box-sizing: border-box;
   color:white;
-}
+} */
 
 .events-text{
   position: relative;
@@ -116,16 +122,8 @@ hr.solid {
   padding: 47px 20px 47px 22px;
   box-sizing: border-box;
   max-width: 100%;
-}
-
-.title-artist-name-container {
-  align-items: center;
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  width: 211px;
-  height: 97px;
+  justify-content: center;
+  display: flex;
 }
 
 b.title{
@@ -134,21 +132,24 @@ b.title{
   color: #f2f2f2;
   font-size: 40px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-style: italic;
 }
 
 p.artist{
   align-self: center;
   text-align: center;
   color: #f2f2f2;
-  font-size: 40px;
+  font-size: 30px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  display: flex;
 }
 
-.mediums-wrapper {
-  flex-direction: row;
+p.mediums{
+  align-self: center;
   text-align: center;
-  padding: 0 57px 0 54px;
-  font-size: var(--font-size-5xl);
+  color: #f2f2f2;
+  font-size: 30px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   display: flex;
-  justify-content: flex-start;
+  margin: 0;
 }
