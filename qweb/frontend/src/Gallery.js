@@ -83,25 +83,31 @@ export default class Gallery extends React.Component{
           
           <br/>
 
-          <div class="black-box">
+          {/* <div class="black-box">
             <b class="title">{this.state.artTitle}</b>
             <p class="artist">{this.state.artistName}</p>
             <p class="mediums">{this.state.artMediums}</p>
-          </div>
+          </div> */}
 
           {this.state.allArt.map(art => {
             if (art.Event == this.state.selectedEvent){
               const imagePath = `./ArtFolder/${art.Photo}`;
-              console.log(imagePath)
               return (
-                <img 
-                  src={require(`./ArtFolder/images.jpg`)} 
-                  alt={art.Name}
-                  onClick={() => this.setState({artistName :  art.Artist, artTitle : art.Name, artMediums : art.Mediums})}
-                />
+                
+                <div className='art-container' key={art.ID}>
+                  <img 
+                    src={require(`./ArtFolder/${art.Photo}`)} 
+                    alt={art.Name}
+                  />
+                <div className='art-info'>
+                  <h2><i>{art.Name}</i></h2>
+                  <p>{art.Artist}</p>
+                  <p>{art.Mediums}</p>
+                </div>
+                </div>
               )
             }
-          })};
+          })}
 
         </main>
         <Footer/>
