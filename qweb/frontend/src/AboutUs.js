@@ -35,12 +35,13 @@ function AboutUs() {
           
       </div>
       <div className="members">
+        {/* do for loop here */}
         {/* {data.map((item, index) => (
           <AboutUsComp key={index} photo={item.photo} name={item.name} description={item.description} />
         ))} */}
+        {/* <AboutUsComp name="Hi" description="hello"/>
         <AboutUsComp name="Hi" description="hello"/>
-        <AboutUsComp name="Hi" description="hello"/>
-        <AboutUsComp name="Hi" description="hello"/>
+        <AboutUsComp name="Hi" description="hello"/> */}
 
       </div>
       

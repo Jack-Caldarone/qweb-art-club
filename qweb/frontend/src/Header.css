@@ -20,6 +20,7 @@
     padding-left: 60px;
     padding-right: 60px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    transition: max-height 0.5s ease;
 }
 
 .menu a:hover{
@@ -50,6 +51,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition: max-height 0.5s ease;
 }
 
 @media screen and (max-width: 1200px){
