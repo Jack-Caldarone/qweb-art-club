@@ -169,6 +169,8 @@ p.mediums{
   display: flex;
   background-color: #1A1A1A;
   width: 100%;
+  height: auto;
+  flex-shrink: 0;
   
 }
 
@@ -189,6 +191,16 @@ p.mediums{
   align-items: center;
   opacity:0;
   transition: opacity 0.1s ease;
+}
+
+.all-containers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  gap: 40px;
 }
 
 
